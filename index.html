@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>看三小!!</title>
+    </head>
+    <body>
+        <div><font size="10">看三小啦!!!!是沒看過是不是啦!!!!</font></div>
+        <span><font size="10">那我讓你看看甚麼叫端火鍋</font></span>
+        <span class="embed-responsive embed-responsive-16by9">
+  <!-- enablejsapi：必為1-->
+  <!-- origin：防止惡意的第三方JS，入侵並控制youtube播放器-->
+  <iframe id="player" width="1000px" height="600px" src="https://www.youtube.com/embed/072tU1tamd0?enablejsapi=1&allowsInlineMediaPlayback=true&playsinline=1&origin＝https://youtu.be/072tU1tamd0"></iframe>
+        </span>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  var player;
+  function onYouTubeIframeAPIReady() {
+    //- 一般使用 影片的id寫在html裡
+    //- 不必加width, height，想加可加在iframe上
+    player = new YT.Player('player', {
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  }
+  function onPlayerReady(e) {
+    //- 為確保瀏覽器上可以自動播放，要把影片調成靜音
+    e.target.mute().playVideo();
+  }
+</script>
+
+    </body>
+</html>
